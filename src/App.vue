@@ -41,10 +41,10 @@
       </v-list>
     </v-navigation-drawer>
     <v-toolbar-side-icon @click.stop="showDrawer = !showDrawer" fixed class="toolbar-icon"></v-toolbar-side-icon>
-    <v-content>
+    <v-content class="main">
       <router-view/>
     </v-content>
-    <v-footer :fixed="fixed" app>
+    <v-footer app absolute>
       <span class="footer">&copy; 2018 by Courtier</span>
     </v-footer>
   </v-app>
@@ -125,7 +125,12 @@ animation: ripple 1s ease;
   top: 30px;
   left: 15px;
 }
+.main {
+  
+}
 .footer {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 </style>
